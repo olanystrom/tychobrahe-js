@@ -2,19 +2,20 @@ const date = new Date();
 
 const tycho = [
   0,
-  [1, 2, 4, 6, 11, 12, 29],
-  [11, 17, 18],
-  [1, 4, 14, 15],
-  [9, 16, 17, 18, 19, 22, 29],
-  [10, 17, 18],
-  [6],
-  [17, 21],
-  [20, 21],
-  [16, 18],
-  [6],
-  [6, 16],
-  [6, 11, 18],
+  [1, 2, 4, 6, 11, 12, 19], // Januari
+  [11, 17, 18], // Februari
+  [1, 4, 14, 15], // Mars
+  [10, 17, 18], // April
+  [7, 15, 18], // Maj
+  [6], // Juni
+  [17, 21], // Juli
+  [2, 10], // Augusti
+  [1, 16, 18], // September
+  [6], // Oktober
+  [6, 18], // November
+  [6, 11, 18], // December
 ];
+
 
 const t = tycho[date.getMonth()].indexOf(date.getDate()) != -1;
 
