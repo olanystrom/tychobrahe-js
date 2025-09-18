@@ -1,2 +1,2 @@
-FROM lkwg82/h2o-http2-server:v2.2.6
-COPY . /var/www/html/
+FROM nginx:alpine-slim
+COPY index.html tycho.js tycho.css brahe-ja.jpeg brahe-nej.jpeg /usr/share/nginx/html/

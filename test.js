@@ -1,4 +1,4 @@
-const date = new Date();
+const assert = require('assert');
 
 const tychoDates = [
   0,
@@ -20,11 +20,10 @@ function isTychoDate(month, day) {
   return tychoDates[month]?.includes(day) || false;
 }
 
-const isTycho = isTychoDate(date.getMonth(), date.getDate())
+// Test 1: Valid Tycho date - January 1
+assert.strictEqual(isTychoDate(1, 1), true, 'January 1 should be a Tycho date');
 
-document.addEventListener("DOMContentLoaded", () => {
-  const braheImage = document.querySelector("#brahe");
-  if (braheImage) {
-    braheImage.src = isTycho ? "brahe-ja.jpeg" : "brahe-nej.jpeg";
-  }
-});
+// Test 2: Invalid date - January 3
+assert.strictEqual(isTychoDate(1, 3), false, 'January 3 should not be a Tycho date');
+
+console.log('All tests passed!');
